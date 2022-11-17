@@ -27,6 +27,8 @@ export async function getStaticProps({ params }) {
     props: {
       pokemon: await res.json(),
     },
+    // to knock the server after 30 sec
+    revalidate: 30,
   };
 }
 
